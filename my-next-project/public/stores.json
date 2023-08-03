@@ -1,6 +1,8 @@
 [
   {
     "nid": 921173728,
+    "season": 1,
+    "episode": 1,
     "characteristic": "마트식당",
     "name": "마굿간편한식당",
     "coordinates": [
@@ -25,6 +27,8 @@
   },
   {
     "nid": 1126233571,
+    "season": 1,
+    "episode": 3,
     "characteristic": "로봇치킨",
     "name": "롸버트치킨 강남1호기",
     "coordinates": [
@@ -65,6 +69,8 @@
   },
   {
     "nid": 18708805,
+    "season": 1,
+    "episode": 3,
     "characteristic": "초코치킨",
     "name": "동네아저씨치킨",
     "coordinates": [
@@ -125,6 +131,8 @@
   },
   {
     "nid": 1537515621,
+    "season": 1,
+    "episode": 4,
     "characteristic": "고대페르시아운동",
     "name": "소마앤바디 힘의집",
     "coordinates": [
@@ -144,6 +152,8 @@
   },
   {
     "nid": 1961880965,
+    "season": 1,
+    "episode": 4,
     "characteristic": "점핑운동",
     "name": "인천점핑운동전문센터",
     "coordinates": [
@@ -163,6 +173,8 @@
   },
   {
     "nid": 1824986140,
+    "season": 1,
+    "episode": 5,
     "characteristic": "한그릇10만원찜뽕",
     "name": "24시 대기만성",
     "coordinates": [
@@ -243,6 +255,8 @@
   },
   {
     "nid": 1172909556,
+    "season": 1,
+    "episode": 5,
     "characteristic": "40cm산더미물갈비",
     "name": "산홍 오산평택점",
     "coordinates": [
@@ -303,6 +317,8 @@
   },
   {
     "nid": 1476690926,
+    "season": 1,
+    "episode": 7,
     "characteristic": "변사와함께하는중식당",
     "name": "몽중식",
     "coordinates": [
@@ -335,6 +351,8 @@
   },
   {
     "nid": 1729088578,
+    "season": 1,
+    "episode": 7,
     "characteristic": "커피코스요리",
     "name": "펠른",
     "coordinates": [
@@ -375,6 +393,8 @@
   },
   {
     "nid": 32209635,
+    "season": 1,
+    "episode": 8,
     "characteristic": "수족관식당",
     "name": "임진강수라상",
     "coordinates": [
@@ -423,6 +443,8 @@
   },
   {
     "nid": 33860470,
+    "season": 1,
+    "episode": 8,
     "characteristic": "기찻길도보3초",
     "name": "교외선 우리집",
     "coordinates": [
@@ -459,6 +481,8 @@
   },
   {
     "nid": 32548209,
+    "season": 2,
+    "episode": 1,
     "characteristic": "1억백숙",
     "name": "어인마니산삼궁",
     "coordinates": [
@@ -511,6 +535,8 @@
   },
   {
     "nid": 1561853968,
+    "season": 2,
+    "episode": 1,
     "characteristic": "한우생케이크",
     "name": "우블링",
     "coordinates": [
@@ -591,6 +617,8 @@
   },
   {
     "nid": 1301721204,
+    "season": 2,
+    "episode": 2,
     "characteristic": "수경재배식당",
     "name": "워터밀",
     "coordinates": [
@@ -671,6 +699,8 @@
   },
   {
     "nid": 1789186517,
+    "season": 2,
+    "episode": 2,
     "characteristic": "3D맵핑식당",
     "name": "비언유주얼",
     "coordinates": [
@@ -711,6 +741,8 @@
   },
   {
     "nid": 31243237,
+    "season": 2,
+    "episode": 3,
     "characteristic": "원테이블한식당",
     "name": "가가",
     "coordinates": [
@@ -739,6 +771,8 @@
   },
   {
     "nid": 36771856,
+    "season": 2,
+    "episode": 3,
     "characteristic": "하루열그릇납작우동",
     "name": "히노야마",
     "coordinates": [
@@ -811,6 +845,8 @@
   },
   {
     "nid": 1947960302,
+    "season": 2,
+    "episode": 5,
     "characteristic": "버거튀김",
     "name": "컨테이너피플 을지로점",
     "coordinates": [
@@ -867,6 +903,8 @@
   },
   {
     "nid": 1738395785,
+    "season": 2,
+    "episode": 5,
     "characteristic": "갈치파스타",
     "name": "시고로",
     "coordinates": [
@@ -899,6 +937,8 @@
   },
   {
     "nid": 1415648808,
+    "season": 2,
+    "episode": 6,
     "characteristic": "수제떡갈비",
     "name": "최가상회",
     "coordinates": [
@@ -923,6 +963,8 @@
   },
   {
     "nid": 37435594,
+    "season": 2,
+    "episode": 6,
     "characteristic": "퓨전떡집",
     "name": "자이소",
     "coordinates": [
@@ -942,6 +984,8 @@
   },
   {
     "nid": 12067740,
+    "season": 2,
+    "episode": 7,
     "characteristic": "구운삼계탕",
     "name": "퓨전굽는삼계탕",
     "coordinates": [
@@ -990,6 +1034,8 @@
   },
   {
     "nid": 1742512433,
+    "season": 2,
+    "episode": 7,
     "characteristic": "보양식코스요리",
     "name": "기후",
     "coordinates": [
@@ -1018,6 +1064,8 @@
   },
   {
     "nid": 31520048,
+    "season": 2,
+    "episode": 9,
     "characteristic": "팥빙콩국수",
     "name": "콩심팥심",
     "coordinates": [
@@ -1078,6 +1126,8 @@
   },
   {
     "nid": 1203544176,
+    "season": 2,
+    "episode": 9,
     "characteristic": "냉면칵테일",
     "name": "장생건강원",
     "coordinates": [
@@ -1114,6 +1164,8 @@
   },
   {
     "nid": 1139991886,
+    "season": 2,
+    "episode": 10,
     "characteristic": "꽃게닭볶음탕",
     "name": "도비네 꽃도리탕 다산점",
     "coordinates": [
@@ -1178,6 +1230,8 @@
   },
   {
     "nid": 1241346213,
+    "season": 2,
+    "episode": 10,
     "characteristic": "순두부우동",
     "name": "홍제동30년우동국수",
     "coordinates": [
@@ -1254,6 +1308,8 @@
   },
   {
     "nid": 37213201,
+    "season": 2,
+    "episode": 11,
     "characteristic": "아트테라피",
     "name": "트리인마인드예술치료교육연구소",
     "coordinates": [
@@ -1273,6 +1329,8 @@
   },
   {
     "nid": 1280949033,
+    "season": 2,
+    "episode": 12,
     "characteristic": "한식다이닝",
     "name": "암소서울",
     "coordinates": [
@@ -1301,6 +1359,8 @@
   },
   {
     "nid": 1237242418,
+    "season": 2,
+    "episode": 12,
     "characteristic": "디저트코스",
     "name": "10월 19일",
     "coordinates": [
@@ -1329,6 +1389,8 @@
   },
   {
     "nid": 1483301737,
+    "season": 2,
+    "episode": 13,
     "characteristic": "작명가",
     "name": "황시현 이름연구원",
     "coordinates": [
@@ -1365,6 +1427,8 @@
   },
   {
     "nid": 1838135293,
+    "season": 3,
+    "episode": 1,
     "characteristic": "개미식당",
     "name": "에빗",
     "coordinates": [
@@ -1393,6 +1457,8 @@
   },
   {
     "nid": 13122769,
+    "season": 3,
+    "episode": 2,
     "characteristic": "60첩횟집",
     "name": "내고향강원도",
     "coordinates": [
@@ -1425,6 +1491,8 @@
   },
   {
     "nid": 1975988944,
+    "season": 3,
+    "episode": 2,
     "characteristic": "회전고기",
     "name": "미육 송도타임스페이스점",
     "coordinates": [
@@ -1501,6 +1569,8 @@
   },
   {
     "nid": 1703442786,
+    "season": 3,
+    "episode": 4,
     "characteristic": "회떠주는PC방",
     "name": "일진PC",
     "coordinates": [
@@ -1520,6 +1590,8 @@
   },
   {
     "nid": 1177874786,
+    "season": 3,
+    "episode": 4,
     "characteristic": "직원보러가는식당",
     "name": "콘크리트 정글",
     "coordinates": [

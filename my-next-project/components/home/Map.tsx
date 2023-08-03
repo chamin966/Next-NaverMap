@@ -2,7 +2,11 @@ import { INITIAL_CENTER, INITIAL_ZOOM, NaverMap } from '../../types/naverMap';
 import { useEffect, useRef } from 'react';
 import Script from 'next/script';
 
-function NaverMap() {
+type Props = {
+  onLoad?: (map: NaverMap) => void;
+};
+
+function Map({ onLoad }: Props) {
   const mapRef = useRef<NaverMap | null>(null);
   const mapId = 'map';
 
@@ -20,6 +24,10 @@ function NaverMap() {
 
     const map = new naver.maps.Map(mapId, mapOptions);
     mapRef.current = map;
+
+    if (onLoad) {
+      onLoad(map);
+    }
   };
 
   useEffect(() => {
@@ -41,4 +49,4 @@ function NaverMap() {
   );
 }
 
-export default NaverMap;
+export default Map;
