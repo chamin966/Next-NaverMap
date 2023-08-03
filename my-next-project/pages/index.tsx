@@ -1,5 +1,9 @@
-import { styled } from 'styled-components';
+import NaverMap from '@/components/home/Map';
 
 export default function Home() {
-  return <>Hello, World! 12321 abcd</>;
+  return (
+    <>
+      <NaverMap />
+    </>
+  );
 }
