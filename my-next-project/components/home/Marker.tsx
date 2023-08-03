@@ -4,6 +4,7 @@ import type { Marker } from '../../types/naverMap';
 const Marker = ({ map, coordinates, icon, onClick }: Marker): null => {
   useEffect(() => {
     let marker: naver.maps.Marker | null = null;
+
     if (map) {
       marker = new naver.maps.Marker({
         map: map,
