@@ -18,7 +18,7 @@ function Map({ onLoad }: Props) {
       scaleControl: false,
       mapDataControl: false,
       logoControlOptions: {
-        position: naver.maps.Position.BOTTOM_LEFT,
+        position: naver.maps.Position.BOTTOM_RIGHT,
       },
     };
 
