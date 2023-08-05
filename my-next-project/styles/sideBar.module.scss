@@ -1,18 +1,64 @@
-// SerchSection.tsx
+$sideBar-width: 400px;
+$sideBar-height: 100vh;
+
+@mixin custom-scroll {
+  &::-webkit-scrollbar {
+    width: 4px; /* 스크롤바의 너비 */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: #c9cacc; /* 스크롤바의 색상 */
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #e8ecef; /*스크롤바 뒷 배경 색상*/
+  }
+}
+
+@mixin overflowSetting {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+@mixin titleTemplate(
+  $titeColor,
+  $subColor,
+  $titleFontSize: 20px,
+  $subFontSize: 16px
+) {
+  :first-child {
+    :nth-child(1) {
+      font-size: $titleFontSize;
+      font-weight: 600;
+      color: $titeColor;
+    }
+    :nth-child(2) {
+      font-size: $subFontSize;
+      color: $subColor;
+    }
+  }
+}
+
+// SideBarSection.tsx
+.SideBarContainer {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 .SearchContainer {
   box-sizing: content-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
-  left: 0;
-  top: 0;
 
-  z-index: 101;
   background-color: white;
-  width: 400px;
-  height: 100vh;
-  box-shadow: 0px 0px 15px 0px #999;
+  width: $sideBar-width;
+  height: $sideBar-height;
+  box-shadow: 3px 0 6px 0 rgb(188, 188, 188);
 }
 
 .SearchBar {
@@ -51,33 +97,28 @@
   }
 }
 
+.DetailContainer {
+  @extend .SearchContainer;
+}
+
 // StoresSection.txt
 .StoresContainer {
-  overflow-x: hidden;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @include overflowSetting;
+  width: $sideBar-width;
   cursor: pointer;
 
-  &::-webkit-scrollbar {
-    width: 4px; /* 스크롤바의 너비 */
-  }
-
-  &::-webkit-scrollbar-thumb {
-    height: 30%; /* 스크롤바의 길이 */
-    background: #c9cacc; /* 스크롤바의 색상 */
-    border-radius: 10px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: #e8ecef; /*스크롤바 뒷 배경 색상*/
-  }
+  @include custom-scroll();
 }
 
 // PeekStore.tsx
 .StoreInfoContainer {
   display: flex;
+  gap: 10px;
   flex-direction: column;
   align-items: center;
-  padding: 10px 20px;
 }
 
 .PeekStoreImage {
@@ -86,25 +127,45 @@
 }
 
 .PeekStoreTextBox {
-  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   width: 340px;
 
-  :first-child {
-    :nth-child(1) {
-      font-size: 20px;
-      font-weight: 600;
-      color: #1d60ac;
-    }
-    :nth-child(2) {
-      font-size: 16px;
-      color: #a6a7a9;
-    }
-  }
-
   :nth-child(2) {
-    margin-top: 5px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
+  @include titleTemplate(#1d60ac, #a6a7a9);
+}
+
+// DetailContents.tsx
+.DetailContainer {
+  @extend .SearchContainer;
+  @include overflowSetting();
+  @include custom-scroll();
+}
+
+.DetailImageBox {
+  display: flex;
+}
+
+.DetailbarTextInfo {
+  padding: 20px;
+  @include titleTemplate('black', #a6a7a9, 23px, 18px);
+}
+
+// TabContentsSection.tsx
+.TabBar {
+  display: flex;
+  justify-content: space-around;
+  padding: 13px;
+  width: 100%;
+}
+
+.TabContents {
+  width: 100%;
+  padding: 15px 10px;
 }

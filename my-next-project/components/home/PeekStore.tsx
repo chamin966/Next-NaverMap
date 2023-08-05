@@ -9,7 +9,6 @@ type Props = {
 };
 
 function PeekStore({ name, address, image, foodKind }: Props) {
-  console.log(name, address, image, foodKind);
   return (
     <div className={styles.StoreInfoContainer}>
       <Image
