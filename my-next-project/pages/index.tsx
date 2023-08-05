@@ -1,4 +1,5 @@
 import MapSection from '@/components/home/MapSection';
+import SearchSection from '@/components/home/SearchSection';
 import useStores from '@/hooks/useStores';
 import { Store } from '@/types/store';
 import { NextPage } from 'next';
@@ -17,7 +18,10 @@ const Home: NextPage<Props> = ({ stores }) => {
 
   return (
     <>
-      <MapSection />
+      <main>
+        <MapSection />
+        <SearchSection />
+      </main>
     </>
   );
 };
