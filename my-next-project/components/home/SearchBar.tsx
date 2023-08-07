@@ -1,6 +1,8 @@
 import styles from '../../styles/sideBar.module.scss';
 import useSearchedStore from '@/hooks/useSearchedStore';
 import useCurrentStore from '@/hooks/useCurrentStore';
+import { TfiClose } from 'react-icons/tfi';
+import { ImSearch } from 'react-icons/im';
 import { useState } from 'react';
 
 function SearchBar() {
@@ -29,16 +31,23 @@ function SearchBar() {
 
   return (
     <>
-      <form onSubmit={onSubmitInputText}>
-        <input
-          type="text"
-          className={styles.SearchBar}
-          placeholder="식당 검색"
-          value={inputText}
-          onChange={onChangeInputText}
-        />
-      </form>
-      <button onClick={onClickErase}>X</button>
+      <div className={styles.SearchBarContainer}>
+        <button className={styles.SearchBtn}>
+          <ImSearch />
+        </button>
+        <form onSubmit={onSubmitInputText}>
+          <input
+            type="text"
+            className={styles.SearchBar}
+            placeholder="식당 검색"
+            value={inputText}
+            onChange={onChangeInputText}
+          />
+        </form>
+        <button onClick={onClickErase}>
+          <TfiClose />
+        </button>
+      </div>
     </>
   );
 }

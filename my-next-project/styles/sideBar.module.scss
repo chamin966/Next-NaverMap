@@ -65,19 +65,6 @@ $naver-theme-color: #01c73c;
   box-shadow: 3px 0 6px 0 rgb(188, 188, 188);
 }
 
-.SearchBar {
-  margin: 20px 0px;
-  padding-left: 45px;
-  line-height: 43px;
-  height: 42px;
-  width: 290px;
-  border: 2px solid #19ce60;
-  background-color: white;
-  border-radius: 5px;
-  font-size: 16px;
-  outline: none;
-}
-
 .FoldingButton {
   display: flex;
   align-items: center;
@@ -105,7 +92,41 @@ $naver-theme-color: #01c73c;
   @extend .SearchContainer;
 }
 
-// StoresSection.txt
+// SearchBar.tsx
+.SearchBarContainer {
+  display: grid;
+  grid-template-columns: 0.3fr 2.5fr 0.3fr;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 5px;
+  margin: 20px 0px;
+  height: auto;
+  width: 340px;
+  border: 2px solid #19ce60;
+  background-color: white;
+  border-radius: 5px;
+  gap: 5px;
+
+  button {
+    border: none;
+    background-color: white;
+    font-size: 17px;
+  }
+}
+.SearchBtn {
+  color: $naver-theme-color;
+}
+
+.SearchBar {
+  width: 100%;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  border-right: 1px solid $border-color;
+  padding: 5px 6px;
+}
+
+// StoresSection.tsx
 .StoresContainer {
   display: flex;
   flex-direction: column;
