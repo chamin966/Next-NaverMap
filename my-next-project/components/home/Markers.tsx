@@ -1,5 +1,5 @@
 import React from 'react';
-import useSWR from 'swr';
+import useSwr from 'swr';
 import { MAP_KEY } from '../../types/naverMap';
 import { STORE_KEY } from '../../hooks/useStores';
 import type { ImageIcon, NaverMap } from '../../types/naverMap';
@@ -32,10 +32,10 @@ export function generateStoreMarkerIcon(
 }
 
 const Markers = () => {
-  const { data: map } = useSWR<NaverMap>(MAP_KEY);
-  const { data: stores } = useSWR<Store[]>(STORE_KEY);
+  const { data: map } = useSwr<NaverMap>(MAP_KEY);
+  const { data: stores } = useSwr<Store[]>(STORE_KEY);
 
-  const { data: currentStore } = useSWR<Store>(CURRENT_STORE_KEY);
+  const { data: currentStore } = useSwr<Store>(CURRENT_STORE_KEY);
   const { setCurrentStore, clearCurrentStore } = useCurrentStore();
 
   if (!map || !stores) return null;

@@ -5,6 +5,7 @@ import DetailContents from './DetailContents';
 
 function DetailSection() {
   const { data: currentStore } = useSwr<Store>(CURRENT_STORE_KEY);
+
   return <DetailContents currentStore={currentStore} />;
 }
 
