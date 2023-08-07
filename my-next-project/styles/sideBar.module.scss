@@ -1,5 +1,9 @@
 $sideBar-width: 400px;
 $sideBar-height: 100vh;
+$icon-color: rgb(152, 152, 152);
+$border-color: rgb(222, 221, 221, 0.7);
+$text-font-size: 1.1rem;
+$naver-theme-color: #01c73c;
 
 @mixin custom-scroll {
   &::-webkit-scrollbar {
@@ -163,9 +167,65 @@ $sideBar-height: 100vh;
   justify-content: space-around;
   padding: 13px;
   width: 100%;
+  border: 1px solid $border-color;
 }
 
 .TabContents {
   width: 100%;
-  padding: 15px 10px;
+  padding: 0px 10px 20px 10px;
+  font-size: $text-font-size;
+}
+
+// HomeBoard.tsx
+.HomeBoardContainer {
+  display: flex;
+  flex-direction: column;
+
+  ul {
+    display: flex;
+    gap: 6px;
+    border-bottom: 1px solid $border-color;
+    padding: 9px 0px;
+
+    :first-child {
+      color: $icon-color;
+    }
+  }
+}
+
+// MenuBoard.tsx
+.menuTitleBox {
+  padding: 10px 0px;
+  @include titleTemplate('black', $naver-theme-color);
+
+  :first-child {
+    :first-child {
+      padding-right: 5px;
+    }
+  }
+}
+.menuBox {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0px;
+}
+
+.hr_dotted {
+  border: 0px;
+  border-top: 2px dotted $border-color;
+}
+
+// ImageBoard.tsx
+.ImageBoardBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0px;
+}
+
+.ImageBoardImage {
+  border-radius: 5px;
 }

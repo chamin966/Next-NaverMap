@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import styles from '../../styles/sideBar.module.scss';
 
 type Props = {
   images: string[];
@@ -6,10 +7,11 @@ type Props = {
 
 function ImageBoard({ images }: Props) {
   return (
-    <div>
+    <div className={styles.ImageBoardBox}>
       {images.map((img, i) => (
         <Image
           key={i}
+          className={styles.ImageBoardImage}
           src={img}
           alt="음식점 이미지"
           height={180}
