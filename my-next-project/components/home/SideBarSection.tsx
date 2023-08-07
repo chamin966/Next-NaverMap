@@ -6,10 +6,12 @@ import React, { useState } from 'react';
 import useSwr from 'swr';
 import { Store } from '@/types/store';
 import useSearchedStore, { SEARCHED_STORE_KEY } from '@/hooks/useSearchedStore';
+import useCurrentStore from '@/hooks/useCurrentStore';
 
 function SideBarSection() {
   const { data: searchedStore } = useSwr<Store>(SEARCHED_STORE_KEY);
   const { setSearchedStore, clearSearchedStore } = useSearchedStore();
+  const { clearCurrentStore } = useCurrentStore();
 
   const [inputText, setInputText] = useState<string>('');
 
@@ -28,6 +30,7 @@ function SideBarSection() {
   const onClickErase = () => {
     setInputText('');
     clearSearchedStore();
+    clearCurrentStore();
   };
 
   return (
