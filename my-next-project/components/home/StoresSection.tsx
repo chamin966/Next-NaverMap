@@ -6,7 +6,6 @@ import PeekStore from './PeekStore';
 
 function StoresSection() {
   const { data: allStore } = useSwr<Store[]>(STORE_KEY);
-  console.log(allStore);
 
   return (
     <div className={styles.StoresContainer}>

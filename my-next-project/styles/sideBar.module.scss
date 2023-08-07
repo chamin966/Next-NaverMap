@@ -1,18 +1,68 @@
-// SerchSection.tsx
+$sideBar-width: 400px;
+$sideBar-height: 100vh;
+$icon-color: rgb(152, 152, 152);
+$border-color: rgb(222, 221, 221, 0.7);
+$text-font-size: 1.1rem;
+$naver-theme-color: #01c73c;
+
+@mixin custom-scroll {
+  &::-webkit-scrollbar {
+    width: 4px; /* 스크롤바의 너비 */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: #c9cacc; /* 스크롤바의 색상 */
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #e8ecef; /*스크롤바 뒷 배경 색상*/
+  }
+}
+
+@mixin overflowSetting {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+@mixin titleTemplate(
+  $titeColor,
+  $subColor,
+  $titleFontSize: 20px,
+  $subFontSize: 16px
+) {
+  :first-child {
+    :nth-child(1) {
+      font-size: $titleFontSize;
+      font-weight: 600;
+      color: $titeColor;
+    }
+    :nth-child(2) {
+      font-size: $subFontSize;
+      color: $subColor;
+    }
+  }
+}
+
+// SideBarSection.tsx
+.SideBarContainer {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 .SearchContainer {
   box-sizing: content-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
-  left: 0;
-  top: 0;
 
-  z-index: 101;
   background-color: white;
-  width: 400px;
-  height: 100vh;
-  box-shadow: 0px 0px 15px 0px #999;
+  width: $sideBar-width;
+  height: $sideBar-height;
+  box-shadow: 3px 0 6px 0 rgb(188, 188, 188);
 }
 
 .SearchBar {
@@ -51,33 +101,28 @@
   }
 }
 
+.DetailContainer {
+  @extend .SearchContainer;
+}
+
 // StoresSection.txt
 .StoresContainer {
-  overflow-x: hidden;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @include overflowSetting;
+  width: $sideBar-width;
   cursor: pointer;
 
-  &::-webkit-scrollbar {
-    width: 4px; /* 스크롤바의 너비 */
-  }
-
-  &::-webkit-scrollbar-thumb {
-    height: 30%; /* 스크롤바의 길이 */
-    background: #c9cacc; /* 스크롤바의 색상 */
-    border-radius: 10px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: #e8ecef; /*스크롤바 뒷 배경 색상*/
-  }
+  @include custom-scroll();
 }
 
 // PeekStore.tsx
 .StoreInfoContainer {
   display: flex;
+  gap: 10px;
   flex-direction: column;
   align-items: center;
-  padding: 10px 20px;
 }
 
 .PeekStoreImage {
@@ -86,25 +131,101 @@
 }
 
 .PeekStoreTextBox {
-  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   width: 340px;
 
-  :first-child {
-    :nth-child(1) {
-      font-size: 20px;
-      font-weight: 600;
-      color: #1d60ac;
-    }
-    :nth-child(2) {
-      font-size: 16px;
-      color: #a6a7a9;
-    }
-  }
-
   :nth-child(2) {
-    margin-top: 5px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
+  @include titleTemplate(#1d60ac, #a6a7a9);
+}
+
+// DetailContents.tsx
+.DetailContainer {
+  @extend .SearchContainer;
+  @include overflowSetting();
+  @include custom-scroll();
+}
+
+.DetailImageBox {
+  display: flex;
+}
+
+.DetailbarTextInfo {
+  padding: 20px;
+  @include titleTemplate('black', #a6a7a9, 23px, 18px);
+}
+
+// TabContentsSection.tsx
+.TabBar {
+  display: flex;
+  justify-content: space-around;
+  padding: 13px;
+  width: 100%;
+  border: 1px solid $border-color;
+}
+
+.TabContents {
+  width: 100%;
+  padding: 0px 10px 20px 10px;
+  font-size: $text-font-size;
+}
+
+// HomeBoard.tsx
+.HomeBoardContainer {
+  display: flex;
+  flex-direction: column;
+
+  ul {
+    display: flex;
+    gap: 6px;
+    border-bottom: 1px solid $border-color;
+    padding: 9px 0px;
+
+    :first-child {
+      color: $icon-color;
+    }
+  }
+}
+
+// MenuBoard.tsx
+.menuTitleBox {
+  padding: 10px 0px;
+  @include titleTemplate('black', $naver-theme-color);
+
+  :first-child {
+    :first-child {
+      padding-right: 5px;
+    }
+  }
+}
+.menuBox {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0px;
+}
+
+.hr_dotted {
+  border: 0px;
+  border-top: 2px dotted $border-color;
+}
+
+// ImageBoard.tsx
+.ImageBoardBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0px;
+}
+
+.ImageBoardImage {
+  border-radius: 5px;
 }
