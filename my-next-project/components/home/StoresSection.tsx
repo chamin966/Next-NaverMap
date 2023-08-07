@@ -16,22 +16,10 @@ function StoresSection() {
   return (
     <div className={styles.StoresContainer}>
       {searchedStore ? (
-        <PeekStore
-          key={searchedStore.nid}
-          name={searchedStore.name}
-          address={searchedStore.address}
-          image={searchedStore.images[0]}
-          foodKind={searchedStore.foodKind}
-        />
+        <PeekStore storeInfo={searchedStore} />
       ) : (
         allStore?.map((store) => (
-          <PeekStore
-            key={store.nid}
-            name={store.name}
-            address={store.address}
-            image={store.images[0]}
-            foodKind={store.foodKind}
-          />
+          <PeekStore key={store.nid} storeInfo={store} />
         ))
       )}
     </div>
