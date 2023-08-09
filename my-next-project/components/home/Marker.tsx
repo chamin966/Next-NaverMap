@@ -21,7 +21,6 @@ const Marker = ({ map, coordinates, icon, onClick }: MapMarker): null => {
 
     if (onClick) {
       naver.maps.Event.addListener(marker, 'click', onClick);
-      if (searchedStore) clearSearchedStore();
     }
 
     return () => {

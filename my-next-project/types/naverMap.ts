@@ -1,6 +1,6 @@
 export type NaverMap = naver.maps.Map;
 
-export const INITIAL_CENTER: Number[] = [37.5262411, 126.99289439];
+export const INITIAL_CENTER: number[] = [37.5262411, 126.99289439];
 
 export const INITIAL_ZOOM = 10;
 

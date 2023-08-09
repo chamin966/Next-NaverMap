@@ -3,6 +3,7 @@ import styles from '../../styles/sideBar.module.scss';
 import React from 'react';
 import { Store } from '@/types/store';
 import useCurrentStore from '@/hooks/useCurrentStore';
+import useSearchedStore from '@/hooks/useSearchedStore';
 
 type Props = {
   storeInfo: Store;
@@ -10,10 +11,13 @@ type Props = {
 
 function PeekStore({ storeInfo }: Props) {
   const { setCurrentStore } = useCurrentStore();
+  const { clearSearchedStore } = useSearchedStore();
 
   const onClickStore = () => {
     setCurrentStore(storeInfo);
+    clearSearchedStore();
   };
+
   return (
     <div className={styles.StoreInfoContainer}>
       <Image
