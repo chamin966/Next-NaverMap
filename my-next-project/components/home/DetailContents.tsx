@@ -2,16 +2,25 @@ import { Store } from '@/types/store';
 import styles from '../../styles/sideBar.module.scss';
 import Image from 'next/image';
 import TabContentsSection from './TabContentsSection';
+import { TfiClose } from 'react-icons/tfi';
+import useCurrentStore from '@/hooks/useCurrentStore';
 
 type Props = {
   currentStore?: Store;
 };
 
 function DetailContents({ currentStore }: Props) {
+  const { clearCurrentStore } = useCurrentStore();
   if (!currentStore) return null;
 
   return (
     <div className={styles.DetailContainer}>
+      <div
+        className={styles.DetailContentsFoldingBtn}
+        onClick={clearCurrentStore}
+      >
+        <TfiClose />
+      </div>
       <div className={styles.DetailImageBox}>
         {currentStore.images.slice(0, 2).map((img, i) => (
           <Image

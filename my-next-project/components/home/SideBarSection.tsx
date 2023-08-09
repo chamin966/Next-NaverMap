@@ -16,7 +16,7 @@ function SideBarSection() {
       <div className={styles.SearchContainer}>
         <SearchBar />
         <StoresSection />
-        <div className={styles.FoldingButton}>
+        <div className={styles.SidBarFoldingButton}>
           <LiaAngleRightSolid size={20}>접기</LiaAngleRightSolid>
         </div>
       </div>
