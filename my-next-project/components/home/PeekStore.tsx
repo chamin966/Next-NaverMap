@@ -17,6 +17,7 @@ function PeekStore({ storeInfo }: Props) {
     setCurrentStore(storeInfo);
     clearSearchedStore();
   };
+
   return (
     <div className={styles.StoreInfoContainer}>
       <Image
