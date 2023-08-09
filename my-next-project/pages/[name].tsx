@@ -2,16 +2,24 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import type { Store } from '../types/store';
 import useCurrentStore from '@/hooks/useCurrentStore';
 import Home from '.';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+import usePath from '@/hooks/usePath';
 
 interface Props {
-  stores: Store[];
   store: Store;
 }
 
-const StoreDetail: NextPage<Props> = ({ store, stores }) => {
+const StoreDetail: NextPage<Props> = ({ store }) => {
+  const { setPath } = usePath();
   const { setCurrentStore } = useCurrentStore();
-  setCurrentStore(store);
-  return <Home stores={stores} />;
+
+  useEffect(() => {
+    setCurrentStore(store);
+    setPath(store.name, store.nid);
+  });
+
+  return <></>;
 };
 export default StoreDetail;
 
@@ -26,5 +34,5 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const stores = (await import('../public/stores.json')).default;
   const store = stores.find((store) => store.name === params?.name);
 
-  return { props: { store, stores } };
+  return { props: { store } };
 };

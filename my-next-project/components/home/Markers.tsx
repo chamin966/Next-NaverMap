@@ -7,6 +7,7 @@ import type { Store } from '../../types/store';
 import Marker from './Marker';
 import useCurrentStore, { CURRENT_STORE_KEY } from '@/hooks/useCurrentStore';
 import useSearchedStore from '@/hooks/useSearchedStore';
+import usePath from '@/hooks/usePath';
 
 const MARKER_HEIGHT = 64;
 const MARKER_WIDTH = 54;
@@ -40,6 +41,7 @@ const Markers = () => {
   const { setCurrentStore, clearCurrentStore } = useCurrentStore();
 
   const { clearSearchedStore } = useSearchedStore();
+  const { setPath } = usePath();
 
   if (!map || !stores) return null;
   return (
@@ -54,6 +56,7 @@ const Markers = () => {
             onClick={() => {
               setCurrentStore(store);
               clearSearchedStore();
+              setPath(store.name, store.nid);
             }}
           />
         );
