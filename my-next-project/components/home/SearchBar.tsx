@@ -20,13 +20,15 @@ function SearchBar() {
     setInputText('');
     const stores = (await import('../../public/stores.json')).default;
     const store = stores.find((store) => store.name === inputText);
-    if (store) setSearchedStore(store);
+    if (store) {
+      setSearchedStore(store);
+      clearCurrentStore();
+    }
   };
 
   const onClickErase = () => {
     setInputText('');
     clearSearchedStore();
-    clearCurrentStore();
   };
 
   return (

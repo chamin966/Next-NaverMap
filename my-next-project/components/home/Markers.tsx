@@ -6,6 +6,7 @@ import type { ImageIcon, NaverMap } from '../../types/naverMap';
 import type { Store } from '../../types/store';
 import Marker from './Marker';
 import useCurrentStore, { CURRENT_STORE_KEY } from '@/hooks/useCurrentStore';
+import useSearchedStore from '@/hooks/useSearchedStore';
 
 const MARKER_HEIGHT = 64;
 const MARKER_WIDTH = 54;
@@ -38,6 +39,8 @@ const Markers = () => {
   const { data: currentStore } = useSwr<Store>(CURRENT_STORE_KEY);
   const { setCurrentStore, clearCurrentStore } = useCurrentStore();
 
+  const { clearSearchedStore } = useSearchedStore();
+
   if (!map || !stores) return null;
   return (
     <>
@@ -50,6 +53,7 @@ const Markers = () => {
             key={store.nid}
             onClick={() => {
               setCurrentStore(store);
+              clearSearchedStore();
             }}
           />
         );
@@ -59,7 +63,10 @@ const Markers = () => {
           map={map}
           coordinates={currentStore.coordinates}
           icon={generateStoreMarkerIcon(currentStore.season, true)}
-          onClick={clearCurrentStore}
+          onClick={() => {
+            clearCurrentStore();
+            clearSearchedStore();
+          }}
           key={currentStore.nid}
         />
       )}
