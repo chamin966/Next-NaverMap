@@ -4,6 +4,7 @@ $icon-color: rgb(152, 152, 152);
 $border-color: rgb(222, 221, 221, 0.7);
 $text-font-size: 1.1rem;
 $naver-theme-color: #01c73c;
+$focus-color: #3b5bff;
 
 @mixin custom-scroll {
   &::-webkit-scrollbar {
@@ -45,12 +46,46 @@ $naver-theme-color: #01c73c;
   }
 }
 
+@mixin foldingBtn($height: 49px, $width: 22px) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: $height;
+  width: $width;
+  background-color: white;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  outline: none;
+  border: 1px solid #e5e5e5;
+  cursor: pointer;
+  left: 100%;
+  box-shadow: 1px 0px 4px rgb(161, 161, 161);
+
+  &:hover {
+    background-color: aliceblue;
+    color: $focus-color;
+  }
+}
+
 // SideBarSection.tsx
 .SideBarContainer {
   display: flex;
   position: absolute;
   left: 0;
   top: 0;
+  transform: translateX(0);
+  transition: all 0.4s ease-out;
+
+  &.sideBarFolding {
+    transform: translateX(-100%);
+    transition: all 0.4s ease-out;
+  }
+}
+
+.sideBarFolding {
+  transform: translateX(-100%);
+  transition: all 1s ease;
 }
 
 .SearchContainer {
@@ -65,31 +100,11 @@ $naver-theme-color: #01c73c;
   box-shadow: 3px 0 6px 0 rgb(188, 188, 188);
 }
 
-.FoldingButton {
-  display: flex;
-  align-items: center;
-  position: absolute;
+.SidBarFoldingButton {
+  @include foldingBtn();
 
-  top: 50%;
-  left: 100%;
   transform: translateY(-50%);
-  height: 49px;
-  width: 22px;
-  background-color: white;
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-  outline: none;
-  border: 1px solid #e5e5e5;
-  cursor: pointer;
-
-  &:hover {
-    background-color: aliceblue;
-    color: #3b5bff;
-  }
-}
-
-.DetailContainer {
-  @extend .SearchContainer;
+  top: 50%;
 }
 
 // SearchBar.tsx
@@ -171,6 +186,43 @@ $naver-theme-color: #01c73c;
   @extend .SearchContainer;
   @include overflowSetting();
   @include custom-scroll();
+}
+
+.DetailContentsCloseBtn {
+  @include foldingBtn(45px, 45px);
+  top: 20px;
+  left: 100%;
+  animation: fade-in 0.5s ease-out both;
+
+  &:hover {
+    border-bottom: 1.5px solid $focus-color;
+    border-top: 1.5px solid $focus-color;
+    border-right: 1.5px solid $focus-color;
+  }
+
+  &.invisibleClose {
+    animation: fade-out 1s ease-out both;
+  }
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+    }
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      display: none;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
 
 .DetailImageBox {

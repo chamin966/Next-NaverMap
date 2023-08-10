@@ -3,10 +3,14 @@ import { Store } from '@/types/store';
 import useSwr from 'swr';
 import DetailContents from './DetailContents';
 
-function DetailSection() {
+type Props = {
+  isFolding: boolean;
+};
+
+function DetailSection({ isFolding }: Props) {
   const { data: currentStore } = useSwr<Store>(CURRENT_STORE_KEY);
 
-  return <DetailContents currentStore={currentStore} />;
+  return <DetailContents isFolding={isFolding} currentStore={currentStore} />;
 }
 
 export default DetailSection;
