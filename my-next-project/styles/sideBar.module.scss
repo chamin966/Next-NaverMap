@@ -74,6 +74,18 @@ $focus-color: #3b5bff;
   position: absolute;
   left: 0;
   top: 0;
+  transform: translateX(0);
+  transition: all 0.4s ease-out;
+
+  &.sideBarFolding {
+    transform: translateX(-100%);
+    transition: all 0.4s ease-out;
+  }
+}
+
+.sideBarFolding {
+  transform: translateX(-100%);
+  transition: all 1s ease;
 }
 
 .SearchContainer {
@@ -176,15 +188,40 @@ $focus-color: #3b5bff;
   @include custom-scroll();
 }
 
-.DetailContentsFoldingBtn {
+.DetailContentsCloseBtn {
   @include foldingBtn(45px, 45px);
   top: 20px;
   left: 100%;
+  animation: fade-in 0.5s ease-out both;
 
   &:hover {
     border-bottom: 1.5px solid $focus-color;
     border-top: 1.5px solid $focus-color;
     border-right: 1.5px solid $focus-color;
+  }
+
+  &.invisibleClose {
+    animation: fade-out 1s ease-out both;
+  }
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+    }
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      display: none;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
 
