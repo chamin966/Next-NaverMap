@@ -15,25 +15,25 @@ function HomeBoard({ description, characteristic, address, phone }: Props) {
   return (
     <ul className={styles.HomeBoardContainer}>
       <ul>
-        <li>
+        <li className={styles.HomeBoardIcon}>
           <LiaThumbsUpSolid />
         </li>
         <li>{characteristic}</li>
       </ul>
       <ul>
-        <li>
+        <li className={styles.HomeBoardIcon}>
           <LiaPhoneSolid />
         </li>
         <li>{phone}</li>
       </ul>
       <ul>
-        <li>
+        <li className={styles.HomeBoardIcon}>
           <LiaHomeSolid />
         </li>
         <li>{address}</li>
       </ul>
       <ul>
-        <li>
+        <li className={styles.HomeBoardIcon}>
           <LiaNewspaperSolid />
         </li>
         <li>{description}</li>

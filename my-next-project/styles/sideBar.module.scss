@@ -3,6 +3,7 @@ $sideBar-height: 100vh;
 $icon-color: rgb(152, 152, 152);
 $border-color: rgb(222, 221, 221, 0.7);
 $text-font-size: 1.1rem;
+$tabBar-font-size: 1.2rem;
 $naver-theme-color: #01c73c;
 $focus-color: #3b5bff;
 
@@ -241,6 +242,7 @@ $focus-color: #3b5bff;
   padding: 13px;
   width: 100%;
   border: 1px solid $border-color;
+  font-size: $tabBar-font-size;
 }
 
 .TabContents {
@@ -264,6 +266,10 @@ $focus-color: #3b5bff;
       color: $icon-color;
     }
   }
+}
+
+.HomeBoardIcon {
+  font-size: $tabBar-font-size;
 }
 
 // MenuBoard.tsx
