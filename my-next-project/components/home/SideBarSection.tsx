@@ -13,7 +13,7 @@ import { CURRENT_STORE_KEY } from '@/hooks/useCurrentStore';
 function SideBarSection() {
   const { data: searchedStore } = useSwr<Store>(SEARCHED_STORE_KEY);
   const { data: currentStore } = useSwr<Store>(CURRENT_STORE_KEY);
-  const [isFolding, setIsFolding] = useState<boolean>(true);
+  const [isFolding, setIsFolding] = useState<boolean>(false);
 
   const onClickFoldBtn = () => {
     setIsFolding(!isFolding);
