@@ -151,27 +151,6 @@
     "menus": []
   },
   {
-    "nid": 1961880965,
-    "season": 1,
-    "episode": 4,
-    "characteristic": "점핑운동",
-    "name": "인천점핑운동전문센터",
-    "coordinates": [
-      37.5333571,
-      126.6524574
-    ],
-    "foodKind": "헬스장",
-    "address": "인천 서구 중봉대로612번길 10-22 우리프라자 704, 5호",
-    "phone": "0507-1368-7330",
-    "images": [
-      "https://search.pstatic.net/common/?autoRotate=true&type=w560_sharpen&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200928_230%2F1601266898598LxTtr_JPEG%2FbL45acsvlHvfHZPND34gezV7.jpg",
-      "https://search.pstatic.net/common/?autoRotate=true&type=w278_sharpen&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200928_122%2F1601269974192ULLnS_JPEG%2FJnroTIucDOLKX0Y52Sv4HNju.jpg",
-      "https://search.pstatic.net/common/?autoRotate=true&type=w278_sharpen&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20191211_45%2F15760533985461A3m5_JPEG%2FdLDqp4hEDauEPGfnfqZBDnW5.jpg"
-    ],
-    "description": "핫한 점핑피트니스! 점핑운동+캉구점프. 자타공인 전국최고 강사진!! [네이버 예약하기]를 통해 간편히 1회 체험예약을 하실수있습니다.",
-    "menus": []
-  },
-  {
     "nid": 1824986140,
     "season": 1,
     "episode": 5,
@@ -263,7 +242,7 @@
       37.134443,
       127.0309258
     ],
-    "foodKind": "냉면",
+    "foodKind": "냉면, 고깃집",
     "address": "경기 평택시 서탄면 발안로 1180",
     "phone": "0507-1380-7757",
     "images": [
@@ -271,7 +250,7 @@
       "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210227_174%2F1614412803056xzOCs_JPEG%2FD99c-gQi06s5KqDSouDqGHMO.jpg",
       "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20211121_239%2F1637489919149mfejx_JPEG%2F1637489880385.jpg"
     ],
-    "description": "",
+    "description": "최상급 재료로 깔끔한 국물과 진한 고기맛을 보여 드리겠습니다.",
     "menus": [
       {
         "name": "진주냉면",
@@ -409,7 +388,7 @@
       "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20201001_17%2F1601558443269IXIjD_JPEG%2Fc8sdH-jHaU8jm3BYa2neWWDW.jpeg.jpg",
       "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=f320_320&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20201001_4%2F1601535105445rtYHN_JPEG%2FIUyksPzgqzL-7l6Ub_rFHwIt.jpeg.jpg"
     ],
-    "description": "",
+    "description": "싱싱한 해산물로 최고의 맛을 선사해드리겠습니다.",
     "menus": [
       {
         "name": "장어정식",
@@ -1307,27 +1286,6 @@
     ]
   },
   {
-    "nid": 37213201,
-    "season": 2,
-    "episode": 11,
-    "characteristic": "아트테라피",
-    "name": "트리인마인드예술치료교육연구소",
-    "coordinates": [
-      37.380066,
-      127.1177766
-    ],
-    "foodKind": "치료,상담",
-    "address": "경기 성남시 분당구 수내로 54 보보스쉐르빌 1509호",
-    "phone": "0507-1485-1143",
-    "images": [
-      "https://search.pstatic.net/common/?autoRotate=true&type=w560_sharpen&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20211122_231%2F1637550910961HRNxq_JPEG%2F%25C6%25AE%25B8%25AE%25C0%25CE%25B8%25B6%25C0%25CE%25B5%25E5_%25B9%25CC%25BC%25FA%25C4%25A1%25B7%25E1.jpg",
-      "https://search.pstatic.net/common/?autoRotate=true&type=w278_sharpen&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200913_84%2F1599973044636kP7pF_JPEG%2FKakaoTalk_Photo_2020-09-13-11-44-37.jpeg",
-      "https://search.pstatic.net/common/?autoRotate=true&type=w278_sharpen&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200913_24%2F1599973044639iyRNi_JPEG%2FKakaoTalk_Photo_2020-09-13-13-49-59.jpeg"
-    ],
-    "description": "몸과 마음의 경험으로부터 만들어지는 미술, 무용동작의 창의적 언어를 통해 우리는 내면과 깊게 소통할 수 있으며, 변화와 성장을 위한 자신만의 속도와 의미를 찾아갈 수 있습니다. + 우울, 불안, 무기력, 분노 등의 정서적 어려움 + 대인관계, 가족, 양육 스트레스 + 변화하는 삶과 생의 주기에서 혼란스러움 + 지금과는 다른 변화가 필요하다고 느끼고 생각하는 분들에게 의미 있는 시간이 될 수 있습니다.",
-    "menus": []
-  },
-  {
     "nid": 1280949033,
     "season": 2,
     "episode": 12,
@@ -1384,44 +1342,6 @@
       {
         "name": "핸드드립커피",
         "price": "5,000원"
-      }
-    ]
-  },
-  {
-    "nid": 1483301737,
-    "season": 2,
-    "episode": 13,
-    "characteristic": "작명가",
-    "name": "황시현 이름연구원",
-    "coordinates": [
-      37.503772,
-      127.0448419
-    ],
-    "foodKind": "운세,사주",
-    "address": "서울 강남구 테헤란로 311 아남타워빌딩 820호",
-    "phone": "0507-1331-2429",
-    "images": [
-      "https://search.pstatic.net/common/?autoRotate=true&type=w560_sharpen&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190815_213%2F1565831801689hMv1I_JPEG%2FxNRDWb8X9HWDB-sWN73Gq8gL.jpg",
-      "https://search.pstatic.net/common/?autoRotate=true&type=w278_sharpen&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190815_32%2F1565831201224HIU7S_JPEG%2FgtycnPD173AX5NCjNDjAfqZu.jpg",
-      "https://search.pstatic.net/common/?autoRotate=true&type=w278_sharpen&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190815_270%2F1565831957394wm0gV_JPEG%2FWLWFGkHbg5G_uLeVAtB9pJ8B.JPG.jpg"
-    ],
-    "description": "이름 분석 상담시 약 2시간 소요되며 이름분석은 오로지 이름만으로 진행 이름으로 한 사람의 재능, 적성, 성격, 궁합, 대인관계 등 모든 삶을 분석.",
-    "menus": [
-      {
-        "name": "이름분석 1인당",
-        "price": "70,000원"
-      },
-      {
-        "name": "이름감명 개당",
-        "price": "변동"
-      },
-      {
-        "name": "작명비",
-        "price": "변동"
-      },
-      {
-        "name": "상호  및 브랜드네임",
-        "price": "변동"
       }
     ]
   },
@@ -1566,27 +1486,6 @@
         "price": "6,900원"
       }
     ]
-  },
-  {
-    "nid": 1703442786,
-    "season": 3,
-    "episode": 4,
-    "characteristic": "회떠주는PC방",
-    "name": "일진PC",
-    "coordinates": [
-      37.2487028183522,
-      127.07958419461798
-    ],
-    "foodKind": "PC방",
-    "address": "경기 수원시 영통구 청명로 10 마크타워 101호",
-    "phone": "0507-1493-0303",
-    "images": [
-      "https://search.pstatic.net/common/?autoRotate=true&type=w560_sharpen&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190906_194%2F1567771658925lyVUc_JPEG%2F5KxrMTNuMFbLlP1UhezUbsTM.jpg",
-      "https://search.pstatic.net/common/?autoRotate=true&type=w278_sharpen&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190906_239%2F15677716615511vYJf_JPEG%2F3p4pxw4clNvuW_5yNbXoAwG3.jpg",
-      "https://search.pstatic.net/common/?autoRotate=true&type=w278_sharpen&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190906_260%2F1567771664585G2NY7_JPEG%2FXamwWeOW2z-FoGZ-qgSvWHRO.jpg"
-    ],
-    "description": "",
-    "menus": []
   },
   {
     "nid": 1177874786,
