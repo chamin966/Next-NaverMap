@@ -129,7 +129,9 @@ $focus-color: #3b5bff;
     font-size: 17px;
   }
 }
-.SearchBtn {
+.SearchIcon {
+  display: flex;
+  justify-content: center;
   color: $naver-theme-color;
 }
 

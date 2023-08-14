@@ -34,9 +34,9 @@ function SearchBar() {
   return (
     <>
       <div className={styles.SearchBarContainer}>
-        <button className={styles.SearchBtn}>
+        <div className={styles.SearchIcon}>
           <ImSearch />
-        </button>
+        </div>
         <form onSubmit={onSubmitInputText}>
           <input
             type="text"
@@ -46,7 +46,7 @@ function SearchBar() {
             onChange={onChangeInputText}
           />
         </form>
-        <button onClick={onClickErase}>
+        <button onClick={onClickErase} aria-label="검색 결과 초기화">
           <TfiClose />
         </button>
       </div>
