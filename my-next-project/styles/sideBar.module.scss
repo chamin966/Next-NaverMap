@@ -111,7 +111,7 @@ $focus-color: #3b5bff;
 // SearchBar.tsx
 .SearchBarContainer {
   display: grid;
-  grid-template-columns: 0.3fr 2.5fr 0.3fr;
+  grid-template-columns: 0.4fr 4fr 0.5fr;
   align-items: center;
   justify-content: center;
   padding: 5px 5px;
@@ -131,8 +131,9 @@ $focus-color: #3b5bff;
 }
 .SearchIcon {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   color: $naver-theme-color;
+  font-size: 18px;
 }
 
 .SearchBar {
@@ -142,6 +143,8 @@ $focus-color: #3b5bff;
   outline: none;
   border-right: 1px solid $border-color;
   padding: 5px 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 // StoresSection.tsx
