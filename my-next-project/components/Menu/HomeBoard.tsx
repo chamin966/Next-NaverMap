@@ -45,7 +45,13 @@ function HomeBoard({
       </ul>
       <ul>
         <li>
-          <Image src={'/images/naver.png'} width={20} height={20} alt="" />
+          <Image
+            src={'/images/naver.png'}
+            width={20}
+            height={20}
+            alt=""
+            priority
+          />
         </li>
         <li>
           <Link

@@ -17,6 +17,7 @@ function ImageBoard({ images }: Props) {
           height={180}
           width={340}
           style={{ objectFit: 'cover' }}
+          priority
         />
       ))}
     </div>
