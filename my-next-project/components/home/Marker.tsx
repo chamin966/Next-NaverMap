@@ -1,13 +1,7 @@
 import { useEffect } from 'react';
 import type { MapMarker } from '../../types/naverMap';
-import useSwr from 'swr';
-import useSearchedStore, { SEARCHED_STORE_KEY } from '@/hooks/useSearchedStore';
-import { Store } from '@/types/store';
 
 const Marker = ({ map, coordinates, icon, onClick }: MapMarker): null => {
-  const { data: searchedStore } = useSwr<Store>(SEARCHED_STORE_KEY);
-  const { clearSearchedStore } = useSearchedStore();
-
   useEffect(() => {
     let marker: naver.maps.Marker | null = null;
 

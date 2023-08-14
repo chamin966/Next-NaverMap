@@ -11,12 +11,11 @@ interface Props {
 }
 
 const StoreDetail: NextPage<Props> = ({ store }) => {
-  const { setPath } = usePath();
   const { setCurrentStore } = useCurrentStore();
 
   useEffect(() => {
+    console.log(store.coordinates);
     setCurrentStore(store);
-    setPath(store.name, store.nid);
   });
 
   return <></>;

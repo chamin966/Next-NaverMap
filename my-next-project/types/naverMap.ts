@@ -2,7 +2,7 @@ export type NaverMap = naver.maps.Map;
 
 export const INITIAL_CENTER: number[] = [37.50171487573252, 126.63510863641869];
 
-export const INITIAL_ZOOM = 10;
+export const INITIAL_ZOOM = 9;
 
 export const MAP_KEY = '/map';
 

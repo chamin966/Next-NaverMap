@@ -56,7 +56,7 @@ const Markers = () => {
             onClick={() => {
               setCurrentStore(store);
               clearSearchedStore();
-              setPath(store.name, store.nid);
+              setPath(store.name, store.nid, store.coordinates);
             }}
           />
         );

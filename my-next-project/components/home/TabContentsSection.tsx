@@ -25,10 +25,12 @@ function TabContentsSection({ currentStore }: Props) {
       <div className={styles.TabContents}>
         {clickedTab === '홈' ? (
           <HomeBoard
+            name={currentStore.name}
             description={currentStore.description}
             characteristic={currentStore.characteristic}
             address={currentStore.address}
             phone={currentStore.phone}
+            nid={currentStore.nid}
           />
         ) : clickedTab === '메뉴' ? (
           <MenuBoard menus={currentStore.menus} />

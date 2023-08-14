@@ -5,10 +5,6 @@ import useSwr from 'swr';
 import PeekStore from './PeekStore';
 import { SEARCHED_STORE_KEY } from '@/hooks/useSearchedStore';
 
-type Props = {
-  searchedStoreName: string;
-};
-
 function StoresSection() {
   const { data: allStore } = useSwr<Store[]>(STORE_KEY);
   const { data: searchedStore } = useSwr<Store>(SEARCHED_STORE_KEY);
