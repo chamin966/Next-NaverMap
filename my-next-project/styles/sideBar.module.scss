@@ -3,7 +3,8 @@ $sideBar-height: 100vh;
 $icon-color: rgb(152, 152, 152);
 $border-color: rgb(222, 221, 221, 0.7);
 $text-font-size: 1.1rem;
-$naver-theme-color: #01c73c;
+$tabBar-font-size: 1.2rem;
+$naver-theme-color: #48ce50;
 $focus-color: #3b5bff;
 
 @mixin custom-scroll {
@@ -241,6 +242,7 @@ $focus-color: #3b5bff;
   padding: 13px;
   width: 100%;
   border: 1px solid $border-color;
+  font-size: $tabBar-font-size;
 }
 
 .TabContents {
@@ -253,17 +255,24 @@ $focus-color: #3b5bff;
 .HomeBoardContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   ul {
     display: flex;
     gap: 6px;
     border-bottom: 1px solid $border-color;
     padding: 9px 0px;
-
-    :first-child {
-      color: $icon-color;
-    }
   }
+}
+
+.HomeBoardIcon {
+  color: $icon-color;
+  font-size: $tabBar-font-size;
+}
+
+.copyLink {
+  cursor: pointer;
+  color: $naver-theme-color;
 }
 
 // MenuBoard.tsx

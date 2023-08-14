@@ -3,14 +3,14 @@ import { useEffect, useRef } from 'react';
 import Script from 'next/script';
 
 type Props = {
-  onLoad?: (map: NaverMap) => void;
+  onLoadMap?: (map: NaverMap) => void;
 };
 
-function Map({ onLoad }: Props) {
+function Map({ onLoadMap }: Props) {
   const mapRef = useRef<NaverMap | null>(null);
   const mapId = 'map';
 
-  const initializeMap = () => {
+  const landingMap = () => {
     const mapOptions = {
       center: new naver.maps.LatLng(INITIAL_CENTER[0], INITIAL_CENTER[1]),
       zoom: INITIAL_ZOOM,
@@ -25,15 +25,13 @@ function Map({ onLoad }: Props) {
     const map = new naver.maps.Map(mapId, mapOptions);
     mapRef.current = map;
 
-    if (onLoad) {
-      onLoad(map);
+    if (onLoadMap) {
+      onLoadMap(map);
     }
   };
 
   useEffect(() => {
-    return () => {
-      mapRef.current?.destroy();
-    };
+    mapRef.current?.destroy();
   }, []);
 
   return (
@@ -42,7 +40,7 @@ function Map({ onLoad }: Props) {
         strategy="afterInteractive"
         type="text/javascript"
         src={`https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_NCP_CLIENT_ID}`}
-        onReady={initializeMap}
+        onReady={landingMap}
       />
       <div id={mapId} style={{ width: '100%', height: '100vh' }} />
     </>

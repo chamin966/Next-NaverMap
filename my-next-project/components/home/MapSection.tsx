@@ -10,12 +10,13 @@ const MapSection = () => {
 
   const onLoadMap = (map: NaverMap) => {
     initializeMap(map);
+    // 맵에 클릭이 일어나면 현재 선택된 마커 삭제
     naver.maps.Event.addListener(map, 'click', clearCurrentStore);
   };
 
   return (
     <>
-      <Map onLoad={onLoadMap} />
+      <Map onLoadMap={onLoadMap} />
       <Markers />
     </>
   );

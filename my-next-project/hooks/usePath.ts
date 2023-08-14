@@ -1,28 +1,35 @@
 import { useRouter } from 'next/router';
-import useMap from './useMap';
+import { NaverMap } from '@/types/naverMap';
+import copy from 'copy-to-clipboard';
 
 const usePath = () => {
   const router = useRouter();
-  const { getMapOptions } = useMap();
 
-  const setPath = (name: string, nid: number) => {
-    router.push(`/?palce=${name}&nid=${nid}`);
+  const setPath = (name: string, nid: number, coordinates: number[]) => {
+    router.replace(
+      `/?palce=${name}&nid=${nid}&zoom=15&lat=${coordinates[0]}&lng=${coordinates[1]}`
+    );
   };
 
   const resetPath = () => {
-    router.push('/');
+    router.replace('/');
   };
 
-  const copyPath = (name: string, nid: number) => {
-    const [lat, lng] = getMapOptions().center;
-    const zoom = getMapOptions().zoom;
-    router.push(`
-      /?palce=${name}&nid=${nid}&zoom=${zoom}&lat=${lat}&lng=${lng}
+  const copyPath = (name: string, nid: number, map: NaverMap) => {
+    const latLag = map.getCenter();
+    const zoom = map.getZoom();
+    copy(`${location.origin}/?palce=${name}&nid=${nid}&zoom=${zoom}&lat=${latLag.y}&lng=${latLag.x}
+  `);
+    router.replace(`
+      /?palce=${name}&nid=${nid}&zoom=${zoom}&lat=${latLag.y}&lng=${latLag.x}
     `);
   };
 
   const getId = () => {
-    return Number(router.asPath.split('nid=')[1]);
+    if (router.asPath.split('&nid=')[1]) {
+      return Number(router.asPath.split('&')[1].slice(4));
+    }
+    return null;
   };
 
   return {
