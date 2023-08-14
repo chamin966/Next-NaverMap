@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { NaverMap } from '@/types/naverMap';
+import copy from 'copy-to-clipboard';
 
 const usePath = () => {
   const router = useRouter();
@@ -17,6 +18,8 @@ const usePath = () => {
   const copyPath = (name: string, nid: number, map: NaverMap) => {
     const latLag = map.getCenter();
     const zoom = map.getZoom();
+    copy(`${location.origin}/?palce=${name}&nid=${nid}&zoom=${zoom}&lat=${latLag.y}&lng=${latLag.x}
+  `);
     router.replace(`
       /?palce=${name}&nid=${nid}&zoom=${zoom}&lat=${latLag.y}&lng=${latLag.x}
     `);
