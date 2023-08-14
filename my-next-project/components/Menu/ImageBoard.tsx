@@ -14,10 +14,9 @@ function ImageBoard({ images }: Props) {
           className={styles.ImageBoardImage}
           src={img}
           alt="음식점 이미지"
-          height={180}
-          width={340}
+          fill
+          sizes="340px"
           style={{ objectFit: 'cover' }}
-          priority
         />
       ))}
     </div>

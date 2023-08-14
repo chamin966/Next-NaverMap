@@ -20,15 +20,16 @@ function PeekStore({ storeInfo }: Props) {
 
   return (
     <div className={styles.StoreInfoContainer}>
-      <Image
-        className={styles.PeekStoreImage}
-        src={storeInfo.images[0]}
-        alt=""
-        width={340}
-        height={180}
-        priority
-        onClick={onClickStore}
-      />
+      <div className={styles.peekImageBox}>
+        <Image
+          className={styles.PeekStoreImage}
+          src={storeInfo.images[0]}
+          alt=""
+          fill
+          sizes="340px"
+          onClick={onClickStore}
+        />
+      </div>
       <div className={styles.PeekStoreTextBox}>
         <div>
           <span onClick={onClickStore}>{storeInfo.name} </span>
