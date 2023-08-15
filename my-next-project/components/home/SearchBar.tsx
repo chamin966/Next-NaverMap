@@ -23,7 +23,7 @@ function SearchBar() {
     if (store) {
       setSearchedStore(store);
       clearCurrentStore();
-    }
+    } else alert('검색어와 매칭되는 결과가 없습니다.');
   };
 
   const onClickErase = () => {
