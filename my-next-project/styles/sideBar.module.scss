@@ -2,6 +2,8 @@ $sideBar-width: 400px;
 $sideBar-height: 100vh;
 $icon-color: rgb(152, 152, 152);
 $border-color: rgb(222, 221, 221, 0.7);
+$title-text-color: #026cc9;
+$sub-text-color: #666666;
 $text-font-size: 1.1rem;
 $tabBar-font-size: 1.2rem;
 $naver-theme-color: #48ce50;
@@ -31,13 +33,13 @@ $focus-color: #3b5bff;
 @mixin titleTemplate(
   $titeColor,
   $subColor,
-  $titleFontSize: 20px,
-  $subFontSize: 16px
+  $titleFontSize: 19px,
+  $subFontSize: 15px
 ) {
   :first-child {
     :nth-child(1) {
-      font-size: $titleFontSize;
       font-weight: 600;
+      font-size: $titleFontSize;
       color: $titeColor;
     }
     :nth-child(2) {
@@ -111,7 +113,7 @@ $focus-color: #3b5bff;
 // SearchBar.tsx
 .SearchBarContainer {
   display: grid;
-  grid-template-columns: 0.3fr 2.5fr 0.3fr;
+  grid-template-columns: 0.4fr 4fr 0.5fr;
   align-items: center;
   justify-content: center;
   padding: 5px 5px;
@@ -129,8 +131,11 @@ $focus-color: #3b5bff;
     font-size: 17px;
   }
 }
-.SearchBtn {
+.SearchIcon {
+  display: flex;
+  justify-content: flex-end;
   color: $naver-theme-color;
+  font-size: 18px;
 }
 
 .SearchBar {
@@ -140,6 +145,8 @@ $focus-color: #3b5bff;
   outline: none;
   border-right: 1px solid $border-color;
   padding: 5px 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 // StoresSection.tsx
@@ -167,6 +174,12 @@ $focus-color: #3b5bff;
   object-fit: cover;
 }
 
+.peekImageBox {
+  position: relative;
+  height: 180px;
+  width: 340px;
+}
+
 .PeekStoreTextBox {
   display: flex;
   flex-direction: column;
@@ -179,7 +192,7 @@ $focus-color: #3b5bff;
     text-overflow: ellipsis;
   }
 
-  @include titleTemplate(#1d60ac, #a6a7a9);
+  @include titleTemplate($title-text-color, $sub-text-color);
 }
 
 // DetailContents.tsx
@@ -232,7 +245,7 @@ $focus-color: #3b5bff;
 
 .DetailbarTextInfo {
   padding: 20px;
-  @include titleTemplate('black', #a6a7a9, 23px, 18px);
+  @include titleTemplate('black', $sub-text-color, 23px, 18px);
 }
 
 // TabContentsSection.tsx
@@ -306,6 +319,8 @@ $focus-color: #3b5bff;
   align-items: center;
   gap: 10px;
   padding: 20px 0px;
+  height: 180px;
+  width: 340px;
 }
 
 .ImageBoardImage {
