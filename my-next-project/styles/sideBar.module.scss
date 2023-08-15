@@ -1,0 +1,328 @@
+$sideBar-width: 400px;
+$sideBar-height: 100vh;
+$icon-color: rgb(152, 152, 152);
+$border-color: rgb(222, 221, 221, 0.7);
+$title-text-color: #026cc9;
+$sub-text-color: #666666;
+$text-font-size: 1.1rem;
+$tabBar-font-size: 1.2rem;
+$naver-theme-color: #48ce50;
+$focus-color: #3b5bff;
+
+@mixin custom-scroll {
+  &::-webkit-scrollbar {
+    width: 4px; /* 스크롤바의 너비 */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: #c9cacc; /* 스크롤바의 색상 */
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #e8ecef; /*스크롤바 뒷 배경 색상*/
+  }
+}
+
+@mixin overflowSetting {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+@mixin titleTemplate(
+  $titeColor,
+  $subColor,
+  $titleFontSize: 19px,
+  $subFontSize: 15px
+) {
+  :first-child {
+    :nth-child(1) {
+      font-weight: 600;
+      font-size: $titleFontSize;
+      color: $titeColor;
+    }
+    :nth-child(2) {
+      font-size: $subFontSize;
+      color: $subColor;
+    }
+  }
+}
+
+@mixin foldingBtn($height: 49px, $width: 22px) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: $height;
+  width: $width;
+  background-color: white;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  outline: none;
+  border: 1px solid #e5e5e5;
+  cursor: pointer;
+  left: 100%;
+  box-shadow: 1px 0px 4px rgb(161, 161, 161);
+
+  &:hover {
+    background-color: aliceblue;
+    color: $focus-color;
+  }
+}
+
+// SideBarSection.tsx
+.SideBarContainer {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(0);
+  transition: all 0.4s ease-out;
+
+  &.sideBarFolding {
+    transform: translateX(-100%);
+    transition: all 0.4s ease-out;
+  }
+}
+
+.sideBarFolding {
+  transform: translateX(-100%);
+  transition: all 1s ease;
+}
+
+.SearchContainer {
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: white;
+  width: $sideBar-width;
+  height: $sideBar-height;
+  box-shadow: 3px 0 6px 0 rgb(188, 188, 188);
+}
+
+.SidBarFoldingButton {
+  @include foldingBtn();
+
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+// SearchBar.tsx
+.SearchBarContainer {
+  display: grid;
+  grid-template-columns: 0.4fr 4fr 0.5fr;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 5px;
+  margin: 20px 0px;
+  height: auto;
+  width: 340px;
+  border: 2px solid #19ce60;
+  background-color: white;
+  border-radius: 5px;
+  gap: 5px;
+
+  button {
+    border: none;
+    background-color: white;
+    font-size: 17px;
+  }
+}
+.SearchIcon {
+  display: flex;
+  justify-content: flex-end;
+  color: $naver-theme-color;
+  font-size: 18px;
+}
+
+.SearchBar {
+  width: 100%;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  border-right: 1px solid $border-color;
+  padding: 5px 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+// StoresSection.tsx
+.StoresContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @include overflowSetting;
+  width: $sideBar-width;
+  cursor: pointer;
+
+  @include custom-scroll();
+}
+
+// PeekStore.tsx
+.StoreInfoContainer {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.PeekStoreImage {
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.peekImageBox {
+  position: relative;
+  height: 180px;
+  width: 340px;
+}
+
+.PeekStoreTextBox {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 340px;
+
+  :nth-child(2) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @include titleTemplate($title-text-color, $sub-text-color);
+}
+
+// DetailContents.tsx
+.DetailContainer {
+  @extend .SearchContainer;
+  @include overflowSetting();
+  @include custom-scroll();
+}
+
+.DetailContentsCloseBtn {
+  @include foldingBtn(45px, 45px);
+  top: 20px;
+  left: 100%;
+  animation: fade-in 0.5s ease-out both;
+
+  &:hover {
+    border-bottom: 1.5px solid $focus-color;
+    border-top: 1.5px solid $focus-color;
+    border-right: 1.5px solid $focus-color;
+  }
+
+  &.invisibleClose {
+    animation: fade-out 1s ease-out both;
+  }
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+    }
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      display: none;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.DetailImageBox {
+  display: flex;
+}
+
+.DetailbarTextInfo {
+  padding: 20px;
+  @include titleTemplate('black', $sub-text-color, 23px, 18px);
+}
+
+// TabContentsSection.tsx
+.TabBar {
+  display: flex;
+  justify-content: space-around;
+  padding: 13px;
+  width: 100%;
+  border: 1px solid $border-color;
+  font-size: $tabBar-font-size;
+}
+
+.TabContents {
+  width: 100%;
+  padding: 0px 10px 20px 10px;
+  font-size: $text-font-size;
+}
+
+// HomeBoard.tsx
+.HomeBoardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  ul {
+    display: flex;
+    gap: 6px;
+    border-bottom: 1px solid $border-color;
+    padding: 9px 0px;
+  }
+}
+
+.HomeBoardIcon {
+  color: $icon-color;
+  font-size: $tabBar-font-size;
+}
+
+.copyLink {
+  cursor: pointer;
+  color: $naver-theme-color;
+}
+
+// MenuBoard.tsx
+.menuTitleBox {
+  padding: 10px 0px;
+  @include titleTemplate('black', $naver-theme-color);
+
+  :first-child {
+    :first-child {
+      padding-right: 5px;
+    }
+  }
+}
+.menuBox {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0px;
+}
+
+.hr_dotted {
+  border: 0px;
+  border-top: 2px dotted $border-color;
+}
+
+// ImageBoard.tsx
+.ImageBoardBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0px;
+  height: 180px;
+  width: 340px;
+}
+
+.ImageBoardImage {
+  border-radius: 5px;
+}
