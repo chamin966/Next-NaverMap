@@ -2,6 +2,8 @@ $sideBar-width: 400px;
 $sideBar-height: 100vh;
 $icon-color: rgb(152, 152, 152);
 $border-color: rgb(222, 221, 221, 0.7);
+$title-text-color: #0067c4;
+$sub-text-color: #8f8f8f;
 $text-font-size: 1.1rem;
 $tabBar-font-size: 1.2rem;
 $naver-theme-color: #48ce50;
@@ -190,7 +192,7 @@ $focus-color: #3b5bff;
     text-overflow: ellipsis;
   }
 
-  @include titleTemplate(#1d60ac, #a6a7a9);
+  @include titleTemplate($title-text-color, $sub-text-color);
 }
 
 // DetailContents.tsx
@@ -243,7 +245,7 @@ $focus-color: #3b5bff;
 
 .DetailbarTextInfo {
   padding: 20px;
-  @include titleTemplate('black', #a6a7a9, 23px, 18px);
+  @include titleTemplate('black', $sub-text-color, 23px, 18px);
 }
 
 // TabContentsSection.tsx
