@@ -2,8 +2,8 @@ $sideBar-width: 400px;
 $sideBar-height: 100vh;
 $icon-color: rgb(152, 152, 152);
 $border-color: rgb(222, 221, 221, 0.7);
-$title-text-color: #0067c4;
-$sub-text-color: #8f8f8f;
+$title-text-color: #026cc9;
+$sub-text-color: #666666;
 $text-font-size: 1.1rem;
 $tabBar-font-size: 1.2rem;
 $naver-theme-color: #48ce50;
@@ -33,13 +33,13 @@ $focus-color: #3b5bff;
 @mixin titleTemplate(
   $titeColor,
   $subColor,
-  $titleFontSize: 20px,
-  $subFontSize: 16px
+  $titleFontSize: 19px,
+  $subFontSize: 15px
 ) {
   :first-child {
     :nth-child(1) {
-      font-size: $titleFontSize;
       font-weight: 600;
+      font-size: $titleFontSize;
       color: $titeColor;
     }
     :nth-child(2) {
