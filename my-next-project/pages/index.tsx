@@ -8,6 +8,7 @@ import { NextPage } from 'next';
 import { useEffect } from 'react';
 import useSwr from 'swr';
 import { NextSeo } from 'next-seo';
+import { url } from 'inspector';
 
 interface Props {
   stores: Store[];
@@ -38,6 +39,9 @@ const Home: NextPage<Props> = ({ stores }) => {
         title="매장 지도"
         description="네이버 지도 API를 활용한 Next.js기반의 매장 지도 서비스입니다."
         canonical="https://next-naver-map-chamin966.vercel.app"
+        openGraph={{
+          url: 'https://next-naver-map-chamin966.vercel.app',
+        }}
       />
       <main>
         <MapSection />
