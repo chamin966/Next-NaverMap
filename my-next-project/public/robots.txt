@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://next-naver-map-chamin966.vercel.app/
+
+# Sitemaps
+Sitemap: https://next-naver-map-chamin966.vercel.app/sitemap.xml
