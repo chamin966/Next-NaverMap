@@ -49,10 +49,12 @@ const Home: NextPage<Props> = ({ stores }) => {
 export default Home;
 
 export async function getStaticProps() {
+  const stores = (await import('../public/stores.json')).default;
+
   //개발 환경에서의 절대 경로 설정 = http://localhost:3000/api/stores
-  const stores = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/stores`
-  ).then((res) => res.json());
+  // const stores = await fetch(
+  //   `${process.env.NEXT_PUBLIC_API_URL}/api/stores`
+  // ).then((res) => res.json());
 
   return {
     props: { stores },
