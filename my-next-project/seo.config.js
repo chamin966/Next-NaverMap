@@ -16,4 +16,10 @@ export default {
       href: 'https://search.pstatic.net/common/?src=https%3A%2F%2Fssl.pstatic.net%2Fstatic%2Fmaps%2Fv5%2Fpc%2Fnaver-map.png&type=f&size=600x600&quality=80&opt=2',
     },
   ],
+  additionalMetaTags: [
+    {
+      name: 'naver-site-verification',
+      content: '88ad71dbb613678aa55528b63737538094f2cea8',
+    },
+  ],
 };
