@@ -9,15 +9,18 @@ function ImageBoard({ images }: Props) {
   return (
     <div className={styles.ImageBoardBox}>
       {images.map((img, i) => (
-        <Image
-          key={i}
-          className={styles.ImageBoardImage}
-          src={img}
-          alt="음식점 이미지"
-          fill
-          sizes="340px"
-          style={{ objectFit: 'cover' }}
-        />
+        <div key={i} className={styles.ImageBox}>
+          <Image
+            className={styles.ImageBoardImage}
+            src={img}
+            alt="음식점 이미지"
+            fill
+            // height={180}
+            // width={340}
+            sizes="340px"
+            style={{ objectFit: 'cover' }}
+          />
+        </div>
       ))}
     </div>
   );
