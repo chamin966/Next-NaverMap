@@ -3,6 +3,8 @@ import { Noto_Sans } from 'next/font/google';
 import type { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
 import SEO from '../seo.config';
+import Script from 'next/script';
+import Head from 'next/head';
 
 const notoSans = Noto_Sans({
   weight: ['400', '700'],
@@ -14,6 +16,24 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className={notoSans.className}>
       <DefaultSeo {...SEO} />
+      <Head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-THG9RGG0V6');
+            `,
+          }}
+        />
+      </Head>
+      {/* Global Site Tag (gtag.js) - Google Analytics */}
+      <Script
+        strategy="afterInteractive"
+        src={'https://www.googletagmanager.com/gtag/js?id=G-THG9RGG0V6'}
+      />
       <Component {...pageProps} />
     </main>
   );
