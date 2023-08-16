@@ -37,6 +37,7 @@ const Home: NextPage<Props> = ({ stores }) => {
       <NextSeo
         title="매장 지도"
         description="네이버 지도 API를 활용한 Next.js기반의 매장 지도 서비스입니다."
+        canonical="https://next-naver-map-chamin966.vercel.app"
       />
       <main>
         <MapSection />
