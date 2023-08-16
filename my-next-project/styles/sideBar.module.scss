@@ -319,7 +319,11 @@ $focus-color: #3b5bff;
   align-items: center;
   gap: 10px;
   padding: 20px 0px;
-  height: 180px;
+}
+
+.ImageBox {
+  position: relative;
+  height: 200px;
   width: 340px;
 }
 
