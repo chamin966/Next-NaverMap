@@ -28,6 +28,7 @@ function PeekStore({ storeInfo }: Props) {
           fill
           sizes="340px"
           onClick={onClickStore}
+          priority
         />
       </div>
       <div className={styles.PeekStoreTextBox}>
