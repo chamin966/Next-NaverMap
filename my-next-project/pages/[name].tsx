@@ -1,10 +1,7 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import type { Store } from '../types/store';
 import useCurrentStore from '@/hooks/useCurrentStore';
-import Home from '.';
-import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import usePath from '@/hooks/usePath';
 
 interface Props {
   store: Store;
@@ -14,7 +11,6 @@ const StoreDetail: NextPage<Props> = ({ store }) => {
   const { setCurrentStore } = useCurrentStore();
 
   useEffect(() => {
-    console.log(store.coordinates);
     setCurrentStore(store);
   });
 
