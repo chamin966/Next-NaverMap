@@ -27,16 +27,17 @@ function DetailContents({ isFolding, currentStore }: Props) {
       </div>
       <div className={styles.DetailImageBox}>
         {currentStore.images.slice(0, 2).map((img, i) => (
-          <Image
-            key={i}
-            src={img}
-            alt="음식점 이미지"
-            width={200}
-            height={200}
-            style={{ objectFit: 'cover' }}
-            sizes="200px"
-            priority
-          />
+          <div key={i} className={styles.DetailImage}>
+            <Image
+              key={i}
+              src={img}
+              alt="음식점 이미지"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="200px"
+              priority
+            />
+          </div>
         ))}
       </div>
       <div className={styles.DetailbarTextInfo}>
