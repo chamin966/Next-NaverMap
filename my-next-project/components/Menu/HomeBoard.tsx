@@ -33,6 +33,7 @@ function HomeBoard({
 
   const onClickCopyUrl = () => {
     copyPath(name, nid, map);
+    alert('URL이 클립보드에 복사 되었습니다.');
   };
 
   return (
