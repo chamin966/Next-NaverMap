@@ -4,6 +4,7 @@ import type { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
 import SEO from '../seo.config';
 import Script from 'next/script';
+import Head from 'next/head';
 
 const notoSans = Noto_Sans({
   weight: ['400', '700'],
@@ -15,6 +16,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className={notoSans.className}>
       <DefaultSeo {...SEO} />
+      <Head>
+        <meta name="robots" content="index, follow" />
+      </Head>
       <Script
         id="my-script"
         dangerouslySetInnerHTML={{
