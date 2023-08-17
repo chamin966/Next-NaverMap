@@ -34,6 +34,7 @@ function DetailContents({ isFolding, currentStore }: Props) {
             width={200}
             height={200}
             style={{ objectFit: 'cover' }}
+            sizes="200px"
             priority
           />
         ))}
