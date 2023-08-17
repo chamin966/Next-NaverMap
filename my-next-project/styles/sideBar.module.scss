@@ -243,6 +243,12 @@ $focus-color: #3b5bff;
   display: flex;
 }
 
+.DetailImage {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
 .DetailbarTextInfo {
   padding: 20px;
   @include titleTemplate('black', $sub-text-color, 23px, 18px);
