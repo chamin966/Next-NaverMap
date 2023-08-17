@@ -2,7 +2,7 @@
 
 ## 👏 프로젝트 시연 영상
 
-[![Video Label](https://github.com/chamin966/Next-NaverMap/assets/98478661/48232573-a42e-440a-8573-302b315f94e1)](https://youtu.be/YQXQa9J0d4M)
+[![Video Label](http://img.youtube.com/vi/YQXQa9J0d4M/0.jpg)](https://youtu.be/YQXQa9J0d4M)
 
 ## 🔍**프로젝트 결과 화면 사진**
 
